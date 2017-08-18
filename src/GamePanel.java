@@ -105,7 +105,6 @@ public class GamePanel extends JPanel implements ActionListener, KeyListener {
 		
 		if (!rocket.isAlive) {
 			currentState = END_STATE;
-			System.out.println("End state!!!");
 		}
 	}
 

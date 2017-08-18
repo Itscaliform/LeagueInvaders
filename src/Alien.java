@@ -2,7 +2,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 public class Alien extends GameObject {
-	private int x, y, width, height;
 
 	public Alien(int x, int y, int width, int height) {
 		super();

@@ -56,9 +56,6 @@ public class ObjectManager {
 				GameObject o2 = objects.get(j);
 
 				if (o1.collisionBox.intersects(o2.collisionBox)) {
-					if (o1.getClass() != o2.getClass())
-						System.out.println("Intersects!! " + o1.getClass().toString() + " " + o2.getClass().toString()
-								+ "o1 x/y " + o1.x + " " + o1.y + " o2 x/y " + o2.x + " " + o2.y);
 					if ((o1 instanceof Alien && o2 instanceof Projectile)
 							|| (o2 instanceof Alien && o1 instanceof Projectile)) {
 						score++;
@@ -67,7 +64,6 @@ public class ObjectManager {
 						o2.isAlive = false;
 					} else if ((o1 instanceof Alien && o2 instanceof Rocketship)
 							|| (o2 instanceof Alien && o1 instanceof Rocketship)) {
-						System.out.println("Alien & rocketShip intersected!!!");
 						o1.isAlive = false;
 						o2.isAlive = false;
 					}
